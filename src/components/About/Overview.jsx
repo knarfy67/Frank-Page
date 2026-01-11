@@ -35,7 +35,7 @@ function Overview() {
         </div>
 
         {/* IMAGE CONTAINER - Order 1 on mobile, 2 on desktop */}
-        <div className="absolute z-10 lg:-right-25  md:right-45 -top-15 md:-top-20 lg:-top-35 flex-1 flex justify-center items-center order-1 md:order-2">
+        <div className="absolute z-10 xl:-right-25 lg:-right-40  md:right-45 -top-15 md:-top-20 lg:-top-35 flex-1 flex justify-center items-center order-1 md:order-2">
           {/* The Floating Icons (represented as a simplified div or actual icons) */}
           <div className="relative">
             <img

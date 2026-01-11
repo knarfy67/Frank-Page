@@ -3,7 +3,7 @@ import useAppState from "../../store/useAppState";
 function Header() {
   const { scrollToSection } = useAppState();
   return (
-    <div className="md:pt-28 pt-30 z-10 flex flex-col items-center justify-center">
+    <div className="md:pt-28 pt-30 mx-12 md:mx-0 z-10 flex flex-col items-center justify-center">
       <div className="flex gap-2">
         <p className="dark:text-light text-base border-b-2 dark:border-b-white font-light md:text-4xl text-2xl italic">
           Frank
@@ -12,7 +12,7 @@ function Header() {
           Here!
         </p>
       </div>
-      <div className="flex gap-2 ">
+      <div className="flex gap-2">
         <p className="lg:text-8xl md:text-6xl text-4xl text-secondary font-bold whitespace-nowrap">
           Full stack
         </p>

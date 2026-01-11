@@ -1,6 +1,5 @@
 //icons and logo
 import Keyboard from "./assets/img/Keyboard.jpg";
-import Ellipse from "./assets/icon/Ellipse.svg";
 
 //sections
 import Home from "./sections/Home";
@@ -32,6 +31,14 @@ function App() {
       />
       <div
         className="absolute hidden md:block top-110 -right-50
+    w-100 h-100 rounded-full opacity-40 pointer-events-none
+    bg-[radial-gradient(circle,_#ef4444_1.2px,_transparent_1.2px)]
+    bg-[length:10px_10px]
+  "
+      />
+
+      <div
+        className="absolute hidden md:block top-300 -left-50
     w-100 h-100 rounded-full opacity-40 pointer-events-none
     bg-[radial-gradient(circle,_#ef4444_1.2px,_transparent_1.2px)]
     bg-[length:10px_10px]
