@@ -13,19 +13,21 @@ function Header() {
         </p>
       </div>
       <div className="flex gap-2">
-        <p className="lg:text-8xl md:text-6xl text-4xl text-secondary font-bold whitespace-nowrap">
+        <p className="lg:text-8xl md:text-6xl sm:text-4xl text-3xl text-secondary font-bold whitespace-nowrap">
           Full stack
         </p>
-        <p className="lg:text-8xl md:text-6xl text-4xl dark:text-light text-third font-bold">
+        <p className="lg:text-8xl md:text-6xl sm:text-4xl text-3xl dark:text-light text-third font-bold">
           Developer
         </p>
       </div>
-      <p className="dark:text-light md:text-6xl text-4xl text-third">&</p>
+      <p className="dark:text-light md:text-6xl sm:text-4xl text-3xl text-third">
+        &
+      </p>
       <div className="flex gap-2 mb-4">
-        <p className="lg:text-8xl md:text-6xl text-4xl  text-secondary font-bold">
+        <p className="lg:text-8xl md:text-6xl sm:text-4xl text-3xl  text-secondary font-bold">
           UI/UX
         </p>
-        <p className="lg:text-8xl md:text-6xl text-4xl dark:text-light text-third font-bold">
+        <p className="lg:text-8xl md:text-6xl sm:text-4xl text-3xl dark:text-light text-third font-bold">
           Designer
         </p>
       </div>
