@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Tailwind 4.1 custom dark variant */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Define theme variables */
+@theme {
+  --color-base: #1c1c1c;
+  --color-third: #3b3b3b;
+  --color-secondary: #e62727;
+  --color-light: #ffffff;
+
+  --font-sans: "Montserrat", system-ui, sans-serif;
+  --font-heading: "Montserrat", sans-serif;
+}
+
+/* Apply smooth transitions */
+* {
+  @apply transition-colors duration-200;
+}
+
+/* Optionally, make body default font */
+@layer base {
+  body {
+    @apply font-sans;
+  }
+}
