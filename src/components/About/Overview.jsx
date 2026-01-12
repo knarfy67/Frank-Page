@@ -6,6 +6,9 @@ import { IoMdDownload } from "react-icons/io";
 import Frank from "../../assets/img/Frank.png";
 const LogoDark = new URL("../../assets/logo/Logo.svg", import.meta.url).href;
 
+//pdf
+import CV from "../../assets/pdf/frank.pdf";
+
 function Overview() {
   return (
     <div className="mb-20 p-8">
@@ -28,10 +31,14 @@ function Overview() {
           </p>
 
           {/* Download Button */}
-          <button className="flex items-center gap-2 bg-transparent border-2 border-white/50 hover:bg-white hover:text-red-600 transition-all px-6 py-3 rounded-xl text-white font-medium">
+          <a
+            href={CV}
+            download="Frank-Arbiso-CV.pdf"
+            className="flex items-center gap-2 bg-transparent border-2 border-white/50 hover:bg-white hover:text-red-600 transition-all px-6 py-3 rounded-xl text-white font-medium"
+          >
             <IoMdDownload size={22} />
             <span>Download CV</span>
-          </button>
+          </a>
         </div>
 
         {/* IMAGE CONTAINER - Order 1 on mobile, 2 on desktop */}
