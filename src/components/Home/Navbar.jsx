@@ -111,7 +111,7 @@ function NavBar() {
         </p>
 
         <p
-          onClick={() => scrollToSection("about")}
+          onClick={() => scrollToSection("services")}
           className="relative font-semibold text-sm text-third dark:text-light cursor-pointer
     before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
     before:bg-secondary before:transition-all before:duration-300 hover:before:w-full"
@@ -132,7 +132,10 @@ function NavBar() {
           )}
         </div>
 
-        <div className="p-2 px-6 rounded-md border-2 border-base dark:border-light">
+        <div
+          onClick={() => scrollToSection("contact")}
+          className="p-2 px-6 rounded-md border-2 border-base dark:border-light hover:bg-secondary cursor-pointer"
+        >
           <p className="font-semibold text-sm text-third dark:text-light">
             Contact me
           </p>

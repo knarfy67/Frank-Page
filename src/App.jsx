@@ -1,14 +1,15 @@
 //icons and logo
 import Keyboard from "./assets/img/Keyboard.jpg";
 
+//hooks
+import { ReactSVG } from "react-svg";
+
 //sections
 import Home from "./sections/Home";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
-
-//hooks
-import { ReactSVG } from "react-svg";
 import Services from "./sections/Services";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
@@ -16,6 +17,15 @@ function App() {
       <div
         /* 3. Added w-200 h-200 for mobile so it has a size, otherwise it might behave oddly */
         className="absolute -top-40 -left-20 w-200 h-200 md:-top-150 md:-left-50 md:w-340 md:h-300 rounded-full z-0 opacity-60 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, #E62727, rgba(230, 39, 39, 0))",
+        }}
+      />
+
+      <div
+        /* 3. Added w-200 h-200 for mobile so it has a size, otherwise it might behave oddly */
+        className="absolute  -bottom-300 -right-40 w-420 h-400 rounded-full z-0 opacity-60 pointer-events-none"
         style={{
           background:
             "linear-gradient(to bottom, #E62727, rgba(230, 39, 39, 0))",
@@ -63,6 +73,7 @@ function App() {
         <About />
         <Skills />
         <Services />
+        <Contact />
       </div>
     </div>
   );
