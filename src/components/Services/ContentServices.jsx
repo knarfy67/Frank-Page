@@ -12,7 +12,7 @@ function ContentServices() {
   return (
     <div className="flex flex-col mt-10 p-8 gap-4">
       <div className="flex flex-col lg:flex-row gap-4">
-        <div className="flex flex-col bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-md px-10 w-full">
+        <div className="flex flex-col bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-md px-10 w-full pb-2">
           <ContentItem
             icon={<MdOutlineWeb size={30} />}
             tittle={"Web Development"}
@@ -32,7 +32,7 @@ function ContentServices() {
         </div>
       </div>
       <div className="flex lg:flex-row flex-col justify-between gap-4 ">
-        <div className="flex flex-col bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-md px-10 w-full">
+        <div className="flex flex-col bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-md px-10 pb-2 w-full">
           <ContentItem
             icon={<BsCollectionPlayFill size={30} />}
             tittle={"Video Editing"}

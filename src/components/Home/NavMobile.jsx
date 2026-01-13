@@ -60,7 +60,10 @@ function NavMobile({ open, setOpen, darkMode, toggleDarkMode }) {
           )}
         </div>
 
-        <div className="p-2 px-6 rounded-md border-2 border-base dark:border-light hover:bg-secondary">
+        <div
+          onClick={() => scrollToSection("contact")}
+          className="p-2 px-6 rounded-md border-2 border-base dark:border-light hover:bg-secondary cursor-pointer"
+        >
           <p className="font-semibold text-sm text-third dark:text-light">
             Contact me
           </p>

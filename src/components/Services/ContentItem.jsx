@@ -9,7 +9,7 @@ function ContentItem({ icon, tittle, Description }) {
         </div>
         <p className="text-lg md:text-lg  dark:text-light">{tittle}</p>
       </div>
-      <p className="border-l-2 pl-4 dark:border-l-white border-l-black md:text-xl text-sm font-light dark:text-light">
+      <p className="border-l-2 pl-4 dark:border-l-white border-l-black md:text-lg text-sm font-light dark:text-light">
         {Description}
       </p>
     </div>

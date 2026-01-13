@@ -30,7 +30,7 @@ function ContactContent() {
             out anytime via email for collaborations or inquiries.
           </p>
           <div className="space-y-2">
-            <div className="flex flex-row items-center gap-1 bg-third p-2 rounded-md">
+            <div className="flex flex-row items-center gap-1 bg-base p-2 rounded-md">
               <div>
                 <MdEmail size={50} color="#D52929" />
               </div>
@@ -39,7 +39,7 @@ function ContactContent() {
                 <p className="text-light">knarfarbz@gmail.com</p>
               </div>
             </div>
-            <div className="flex flex-row items-center gap-1 bg-third p-2 rounded-md">
+            <div className="flex flex-row items-center gap-1 bg-base p-2 rounded-md">
               <div>
                 <FaLocationDot size={50} color="#D52929" />
               </div>
@@ -52,34 +52,34 @@ function ContactContent() {
           <div className="flex flex-col mt-4">
             <p className="dark:text-light">
               Connect With Socials{" "}
-              <div className="flex flex-row gap-4">
+              <div className="flex flex-row gap-6 pb-2">
                 <a
                   href="https://github.com/knarfy67"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaGithub size={30} />
+                  <FaGithub size={30} color="#D52929" />
                 </a>
                 <a
                   href="https://www.facebook.com/frank.y.arbiso/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaFacebook size={30} />
+                  <FaFacebook size={30} color="#D52929" />
                 </a>
                 <a
                   href="https://www.instagram.com/knarfy67/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaInstagram size={30} />
+                  <FaInstagram size={30} color="#D52929" />
                 </a>
                 <a
                   href="https://www.linkedin.com/in/frank-arbiso-817609160/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <FaLinkedin size={30} />
+                  <FaLinkedin size={30} color="#D52929" />
                 </a>
               </div>
             </p>

@@ -10,6 +10,7 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Services from "./sections/Services";
 import Contact from "./sections/Contact";
+import Footer from "./components/Home/Footer";
 
 function App() {
   return (
@@ -74,6 +75,7 @@ function App() {
         <Skills />
         <Services />
         <Contact />
+        <Footer />
       </div>
     </div>
   );
