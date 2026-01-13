@@ -1,5 +1,6 @@
 //hooks
 import ContentItem from "./ContentItem";
+import { motion } from "framer-motion";
 
 //icons
 import { MdOutlineWeb } from "react-icons/md";
@@ -10,7 +11,19 @@ import { RiProfileFill } from "react-icons/ri";
 
 function ContentServices() {
   return (
-    <div className="flex flex-col mt-10 p-8 gap-4">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }} // start slightly up, small, and invisible
+      whileInView={{ opacity: 1, y: 0 }} // fade in, scale up, slide to original position
+      exit={{ opacity: 0, y: 20 }} // fade out and slide down when leaving
+      viewport={{ once: false, amount: 0.5 }} // triggers when 50% visible
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        duration: 0.5,
+      }}
+      className="flex flex-col mt-10 p-8 gap-4"
+    >
       <div className="flex flex-col lg:flex-row gap-4">
         <div className="flex flex-col bg-white/20 dark:bg-black/20 backdrop-blur-md rounded-md px-10 w-full pb-2">
           <ContentItem
@@ -60,7 +73,7 @@ function ContentServices() {
           />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

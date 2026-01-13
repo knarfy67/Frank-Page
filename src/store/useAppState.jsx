@@ -28,8 +28,11 @@ const useAppState = create(
       scrollToSection: (id) => {
         const el = document.getElementById(id);
         if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-          set({ open: false }); // ✅ close mobile menu
+          const yOffset = -80; // adjust based on navbar height
+          const y =
+            el.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: "smooth" });
+          setOpen(false);
         }
       },
     }),

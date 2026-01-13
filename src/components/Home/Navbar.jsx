@@ -46,20 +46,23 @@ function NavBar() {
       `}
     >
       <div className="flex flex-col md:block gap-4">
-        <img
-          src={darkMode ? LogoWhite : LogoBlack}
-          alt="Logo"
-          className="w-50 h-20"
-        />
-
-        {/* <ReactSVG
-          src={darkMode ? LogoLight : LogoLight}
-          className="w-32 h-auto"
-          beforeInjection={(svg) => {
-            svg.classList.add("w-full", "h-auto", "fill-current");
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.5,
           }}
-        /> */}
-        {/* mobile view */}
+        >
+          <img
+            src={darkMode ? LogoWhite : LogoBlack}
+            alt="Logo"
+            className="w-50 h-20"
+          />
+        </motion.div>
+
         <AnimatePresence>
           {open && (
             <motion.div
@@ -91,45 +94,85 @@ function NavBar() {
       </div>
       {/* desktop view */}
       <div className="hidden md:flex md:flex-row gap-12">
-        <p
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.6,
+          }}
           onClick={() => scrollToSection("home")}
           className="relative font-semibold text-sm text-third dark:text-light cursor-pointer
     before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
     before:bg-secondary before:transition-all before:duration-300 hover:before:w-full"
         >
           Home
-        </p>
+        </motion.p>
 
-        <p
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.7,
+          }}
           onClick={() => scrollToSection("about")}
           className="relative font-semibold text-sm text-third dark:text-light cursor-pointer
     before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
     before:bg-secondary before:transition-all before:duration-300 hover:before:w-full"
         >
           About me
-        </p>
+        </motion.p>
 
-        <p
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.8,
+          }}
           onClick={() => scrollToSection("skill")}
           className="relative font-semibold text-sm text-third dark:text-light cursor-pointer
     before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
     before:bg-secondary before:transition-all before:duration-300 hover:before:w-full"
         >
           Skills
-        </p>
+        </motion.p>
 
-        <p
+        <motion.p
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 0.9,
+          }}
           onClick={() => scrollToSection("services")}
           className="relative font-semibold text-sm text-third dark:text-light cursor-pointer
     before:absolute before:bottom-0 before:left-0 before:h-[2px] before:w-0 
     before:bg-secondary before:transition-all before:duration-300 hover:before:w-full"
         >
           Services
-        </p>
+        </motion.p>
       </div>
       <div className="hidden md:flex md:flex-row gap-4 items-center">
         {/* Dark Mode Toggle */}
-        <div
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 1,
+          }}
           onClick={toggleDarkMode}
           className="p-1.5  px-4 rounded-md border-2 border-base dark:border-light"
         >
@@ -138,16 +181,24 @@ function NavBar() {
           ) : (
             <CiLight size={24} color="white" />
           )}
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
+            delay: 1.1,
+          }}
           onClick={() => scrollToSection("contact")}
           className="p-2 px-6 rounded-md border-2 border-base dark:border-light hover:bg-secondary cursor-pointer"
         >
           <p className="font-semibold text-sm text-third dark:text-light">
             Contact me
           </p>
-        </div>
+        </motion.div>
       </div>
     </div>
   );

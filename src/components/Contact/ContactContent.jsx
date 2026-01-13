@@ -1,5 +1,6 @@
 //hooks
 import Lottie from "lottie-react";
+import { motion } from "framer-motion";
 
 //logo and icons
 import ContactAnimation from "../../assets/animations/ContactAnimation.json";
@@ -12,7 +13,19 @@ import { FaLocationDot } from "react-icons/fa6";
 
 function ContactContent() {
   return (
-    <div className="mt-10">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }} // start slightly up, small, and invisible
+      whileInView={{ opacity: 1, y: 0 }} // fade in, scale up, slide to original position
+      exit={{ opacity: 0, y: 20 }} // fade out and slide down when leaving
+      viewport={{ once: false, amount: 0.5 }} // triggers when 50% visible
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        duration: 0.5,
+      }}
+      className="mt-10"
+    >
       <div className="flex flex-1 md:flex-row flex-col">
         <div className="w-full md:w-1/2 flex justify-center">
           <Lottie
@@ -86,7 +99,7 @@ function ContactContent() {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

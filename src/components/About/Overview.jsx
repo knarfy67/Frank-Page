@@ -1,5 +1,6 @@
 //hooks
 import { ReactSVG } from "react-svg";
+import { motion } from "framer-motion";
 
 //logo and images
 import { IoMdDownload } from "react-icons/io";
@@ -11,12 +12,28 @@ import CV from "../../assets/pdf/frank.pdf";
 
 function Overview() {
   return (
-    <div className="mb-20 p-8">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }} // start slightly up, small, and invisible
+      whileInView={{ opacity: 1, y: 0 }} // fade in, scale up, slide to original position
+      exit={{ opacity: 0, y: 20 }} // fade out and slide down when leaving
+      viewport={{ once: false, amount: 0.5 }} // triggers when 50% visible
+      transition={{
+        type: "spring",
+        stiffness: 200,
+        damping: 20,
+        duration: 0.5,
+      }}
+      className="mb-20 p-8"
+    >
       {/* Main Card Container */}
       <div className="relative z-0 bg-gradient-to-br from-red-600 to-red-900 rounded-3xl p-8 md:p-12 flex flex-col md:flex-row items-center md:items-start gap-8">
         {/* TEXT CONTENT - Order 2 on mobile, 1 on desktop */}
         <div className="flex-1 mt-50 lg:mt-0 order-2 md:order-1 flex flex-col items-center md:items-start">
-          <p className="text-white text-lg leading-relaxed md:text-left mb-8 max-w-2xl">
+          <motion.p
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            className="text-white text-lg leading-relaxed md:text-left mb-8 max-w-2xl"
+          >
             My name is <span className="font-semibold">Frank Arbiso Jr.</span>,
             a dedicated
             <i className="font-bold"> Fullstack Developer and UI/UX Designer</i>
@@ -28,7 +45,7 @@ function Overview() {
             <i className="font-bold">Assistant Marketing Associate</i> at Jungle
             Bravo involved creating email designs and graphic ads for social
             media.
-          </p>
+          </motion.p>
 
           {/* Download Button */}
           <a
@@ -66,7 +83,7 @@ function Overview() {
         {/* Optional: Subtle Background Watermark (the code brackets) */}
         <div className="absolute bottom-[-20px] left-1/2 -translate-x-1/2 opacity-10 text-[150px] font-bold text-white pointer-events-none select-none"></div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
