@@ -1,21 +1,26 @@
+//hooks
+import useAppState from "../../store/useAppState";
+
+//logo and icons
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
+import LogoBlack from "../../assets/logo/LogoBlack.png";
+import LogoWhite from "../../assets/logo/LogoWhite.png";
 
 function FooterContent() {
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setOpen(false);
-    }
-  };
+  const { scrollToSection, darkMode } = useAppState();
   return (
     <div className="flex flex-col mx-10 space-y-10 md:flex-row justify-between items-start ">
       <div className="flex flex-col ">
+        <img
+          src={darkMode ? LogoWhite : LogoBlack}
+          alt="Logo"
+          className="w-50 h-20"
+        />
         <p className="dark:text-light text-sm mb-2">
           FullStack Developer and UI/UX Designer
         </p>

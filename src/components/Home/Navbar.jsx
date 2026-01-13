@@ -1,5 +1,7 @@
 //logo and svg
 import { ReactSVG } from "react-svg";
+import LogoBlack from "../../assets/logo/LogoBlack.png";
+import LogoWhite from "../../assets/logo/LogoWhite.png";
 const LogoDark = new URL("../../assets/logo/Logo.svg", import.meta.url).href;
 const LogoLight = new URL("../../assets/logo/LogoLight.svg", import.meta.url)
   .href;
@@ -44,13 +46,19 @@ function NavBar() {
       `}
     >
       <div className="flex flex-col md:block gap-4">
-        <ReactSVG
+        <img
+          src={darkMode ? LogoWhite : LogoBlack}
+          alt="Logo"
+          className="w-50 h-20"
+        />
+
+        {/* <ReactSVG
           src={darkMode ? LogoLight : LogoLight}
           className="w-32 h-auto"
           beforeInjection={(svg) => {
             svg.classList.add("w-full", "h-auto", "fill-current");
           }}
-        />
+        /> */}
         {/* mobile view */}
         <AnimatePresence>
           {open && (

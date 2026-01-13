@@ -1,15 +1,14 @@
+//hooks
+import useAppState from "../../store/useAppState";
+
+//logo and icons
 import { FaMoon } from "react-icons/fa";
 import { CiLight } from "react-icons/ci";
 
 function NavMobile({ open, setOpen, darkMode, toggleDarkMode }) {
+  const { scrollToSection } = useAppState();
   if (!open) return null;
-  const scrollToSection = (id) => {
-    const el = document.getElementById(id);
-    if (el) {
-      el.scrollIntoView({ behavior: "smooth" });
-      setOpen(false);
-    }
-  };
+
   return (
     <div className="mx-2 flex flex-col md:hidden gap-2 dark:bg-base  bg-light shadow-lg rounded-lg p-4">
       <p
