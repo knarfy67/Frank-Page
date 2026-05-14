@@ -86,7 +86,7 @@ function Header() {
           }}
           className="lg:text-8xl md:text-6xl sm:text-4xl text-3xl  text-secondary font-bold"
         >
-          UI/UX
+          Graphic
         </motion.p>
         <motion.p
           initial={{ y: -20, opacity: 0 }}

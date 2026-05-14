@@ -36,7 +36,10 @@ function Overview() {
           >
             My name is <span className="font-semibold">Frank Arbiso Jr.</span>,
             a dedicated
-            <i className="font-bold"> Fullstack Developer and UI/UX Designer</i>
+            <i className="font-bold">
+              {" "}
+              Fullstack Developer and Graphic Designer
+            </i>
             . My career began as a <i className="font-bold">cartoonist</i>,
             which reflects my creativity and storytelling ability. I later
             worked as a <i className="font-bold">Merchandiser </i>
